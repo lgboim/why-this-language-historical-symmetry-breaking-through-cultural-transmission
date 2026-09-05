@@ -1,0 +1,40 @@
+{
+  "@context": "https://w3id.org/codemeta/3.0",
+  "@type": "SoftwareSourceCode",
+  "name": "Why This Language? Historical Symmetry Breaking through Cultural Transmission (code, pre-registrations, results and manuscript)",
+  "alternateName": "why-this-language-historical-symmetry-breaking-through-cultural-transmission",
+  "description": "Research software, pre-registrations with frozen thresholds, verdict reports and manuscript for a minimal controlled model of cultural transmission in a Lewis referential game. A limited transmitted record breaks symmetry among multiple structured reconstructions available to independent learners and carries the developmental state in which it was captured (the Snapshot Effect). Version 2.0.0 corrects Version 1.0.0 after an independent data verification.",
+  "codeRepository": "https://github.com/lgboim/why-this-language-historical-symmetry-breaking-through-cultural-transmission",
+  "issueTracker": "https://github.com/lgboim/why-this-language-historical-symmetry-breaking-through-cultural-transmission/issues",
+  "version": "2.0.0",
+  "datePublished": "2026-09-05",
+  "author": {
+    "@type": "Person",
+    "givenName": "Ariel",
+    "familyName": "Elboim",
+    "@id": "https://orcid.org/0009-0001-1341-366X"
+  },
+  "identifier": "https://doi.org/10.5281/zenodo.22338797",
+  "sameAs": "https://zenodo.org/records/22338797",
+  "citation": "https://doi.org/10.5281/zenodo.22338453",
+  "license": "https://spdx.org/licenses/MIT.html",
+  "programmingLanguage": "Python",
+  "runtimePlatform": "Python 3.11 or later, CPU-only PyTorch",
+  "softwareRequirements": [
+    "torch>=2.12",
+    "numpy>=2.4",
+    "scipy>=1.18",
+    "matplotlib>=3.11"
+  ],
+  "keywords": [
+    "cultural transmission",
+    "iterated learning",
+    "emergent communication",
+    "symmetry breaking",
+    "developmental provenance",
+    "language evolution",
+    "referential game",
+    "pre-registration",
+    "reproducible research"
+  ]
+}

@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the archived Zenodo releases below."
+title: "Why This Language? Historical Symmetry Breaking through Cultural Transmission: code, pre-registrations, results and manuscript"
+type: software
+version: 2.0.0
+date-released: 2026-09-05
+doi: 10.5281/zenodo.22338797
+url: "https://doi.org/10.5281/zenodo.22338797"
+abstract: >-
+  Research software, pre-registrations, results and manuscript for a minimal controlled
+  model of cultural transmission in a Lewis referential game. A limited transmitted record
+  breaks symmetry among multiple structured reconstructions available to independent
+  learners, biasing them toward a shared, historically contingent organisation despite
+  substantial item-level turnover; the record also biases reconstruction toward the
+  developmental state in which it was captured (the Snapshot Effect). Pre-registered,
+  replicated on untouched seeds, tested in a second architecture and in a minimal
+  reconstruction model. Version 2.0.0 corrects Version 1.0.0 after an independent data
+  verification.
+keywords:
+  - cultural transmission
+  - iterated learning
+  - emergent communication
+  - symmetry breaking
+  - developmental provenance
+  - language evolution
+  - referential game
+  - pre-registration
+  - reproducible research
+authors:
+  - family-names: Elboim
+    given-names: Ariel
+    orcid: "https://orcid.org/0009-0001-1341-366X"
+repository-code: "https://github.com/lgboim/why-this-language-historical-symmetry-breaking-through-cultural-transmission"
+license: MIT
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22338797
+    description: Code, registrations and results, Version 2.0.0 (Zenodo)
+  - type: doi
+    value: 10.5281/zenodo.22305563
+    description: Code, registrations and results, all versions (Zenodo concept DOI)
+  - type: doi
+    value: 10.5281/zenodo.22338453
+    description: Preprint, Version 2.0 (Zenodo)
+  - type: doi
+    value: 10.5281/zenodo.22305642
+    description: Preprint, all versions (Zenodo concept DOI)
+preferred-citation:
+  type: article
+  title: "Why This Language? Historical Symmetry Breaking through Cultural Transmission"
+  authors:
+    - family-names: Elboim
+      given-names: Ariel
+      orcid: "https://orcid.org/0009-0001-1341-366X"
+  year: 2026
+  doi: 10.5281/zenodo.22338453
+  url: "https://doi.org/10.5281/zenodo.22338453"
+  notes: "Working paper, Version 2.0, 5 September 2026."

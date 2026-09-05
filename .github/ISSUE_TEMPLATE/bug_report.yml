@@ -1,0 +1,48 @@
+name: Code or result-file bug
+description: Report a reproducible problem in a public script, saved input, or verdict report.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not upload credentials or private paths. Describe large run files by cell, seed and SHA-256.
+  - type: input
+    id: file
+    attributes:
+      label: Affected file or artefact
+      placeholder: replication/confirm2b.py, replication/corrections_v2/recomputed/...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction command and output
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: macOS 15, Python 3.12.4, torch 2.12.1
+    validations:
+      required: true
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: Security check
+      options:
+        - label: I have not included credentials, private paths, or non-public material.
+          required: true

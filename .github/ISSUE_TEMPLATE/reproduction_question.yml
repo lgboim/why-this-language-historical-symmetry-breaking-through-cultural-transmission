@@ -1,0 +1,49 @@
+name: Reproduction question
+description: Ask about setup, saved inputs, hashes, or a numerical reproduction discrepancy.
+title: "[Reproduction]: "
+labels: [reproduction]
+body:
+  - type: markdown
+    attributes:
+      value: Read REPRODUCIBILITY.md first. It says which evaluators run from the shipped inputs and which need the full run set.
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Reproduction stage
+      options:
+        - Public verification (manifest, tests, compile)
+        - Re-scoring from shipped evaluator inputs
+        - Reconstruction model (model_v2.py)
+        - Full regeneration with lab.py or replicate.py
+        - Figure generation
+        - Hash or manifest verification
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Exact command, including environment variables
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: discrepancy
+    attributes:
+      label: Question or numerical discrepancy (regenerated value next to the shipped one)
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Ubuntu 24.04, Python 3.12.4, torch 2.12.1
+    validations:
+      required: true
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: Security check
+      options:
+        - label: I have not included credentials, private paths, or non-public material.
+          required: true

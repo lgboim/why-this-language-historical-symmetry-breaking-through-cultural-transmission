@@ -1,0 +1,29 @@
+# Generated run files: hundreds of megabytes per cohort; see REPRODUCIBILITY.md
+replication/results*/*_seed*.json
+replication/results*/*.pt
+replication/results*/*.log
+replication/results_smoke*/
+replication/results_quick/
+!replication/results/*_seed*.json
+!replication/results_v3/small__generations_seed*.json
+!replication/results_v3_confirm/small__generations_seed*.json
+
+# Secrets and local configuration
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+
+# Python and operating-system artefacts
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+venv/
+
+# Local build and scratch outputs
+tmp/
+scratch/
+dist/
+!replication/results_model/t4_v2_per_seed.json

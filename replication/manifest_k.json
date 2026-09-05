@@ -1,0 +1,148 @@
+{
+  "rule": {
+    "seed_share": 0.8,
+    "ci": "paired bootstrap 95% must exclude 0 (directional) / lie within the stated band (equivalence)",
+    "frozen": "2026-09-04 core freeze; thresholds may not be edited"
+  },
+  "hypotheses": [
+    {
+      "id": "K1",
+      "metric": "topsim_distinct",
+      "contrast": "cap8 - cap19 (select x fresh pooled)",
+      "direction": "<",
+      "evaluator": "confirm2.py"
+    },
+    {
+      "id": "K2",
+      "metric": "topsim_distinct",
+      "contrast": "cap19 - cap40",
+      "direction": "=",
+      "evaluator": "confirm2.py"
+    },
+    {
+      "id": "K3",
+      "metric": "CBM, owners_topsim",
+      "contrast": "cap19 - cap40",
+      "direction": ">",
+      "evaluator": "confirm2.py"
+    },
+    {
+      "id": "K4",
+      "metric": "continuity",
+      "contrast": "cap40 - cap19, cap19 - cap8",
+      "direction": ">",
+      "min_effect": 0.15,
+      "evaluator": "confirm2.py"
+    },
+    {
+      "id": "K5",
+      "metric": "corr(continuity, topsim_distinct) > 0; corr(continuity, convexity) < 0",
+      "contrast": "across cells",
+      "evaluator": "confirm2.py"
+    },
+    {
+      "id": "K6",
+      "metric": "topsim_distinct, CBM",
+      "contrast": "noise0.2 - noise0",
+      "direction": "<",
+      "evaluator": "confirm2.py"
+    },
+    {
+      "id": "K7",
+      "metric": "n_owners",
+      "contrast": "noise0.2 - noise0",
+      "direction": ">",
+      "evaluator": "confirm2.py"
+    },
+    {
+      "id": "K8",
+      "metric": "topsim_distinct, CBM, test_acc (=); fidelity (>)",
+      "contrast": "reader both - sender",
+      "evaluator": "confirm2.py"
+    },
+    {
+      "id": "K9",
+      "metric": "convexity",
+      "contrast": "accumulate - rewrite (>); cap8 - cap40 (>)",
+      "evaluator": "confirm2.py"
+    },
+    {
+      "id": "K10",
+      "metric": "repeat parent's choice: taught source - untaught source",
+      "direction": ">",
+      "min_effect": 0.15,
+      "extra": "untaught within 0.10 of chance",
+      "evaluator": "confirm2b.py"
+    },
+    {
+      "id": "K11",
+      "metric": "per-seed slope of retention on #taught neighbours",
+      "direction": ">",
+      "evaluator": "confirm2b.py"
+    },
+    {
+      "id": "K12",
+      "metric": "retention | anchors, cap40 - cap8",
+      "direction": "equivalence |mean|<0.05, CI within +-0.08",
+      "evaluator": "confirm2b.py"
+    },
+    {
+      "id": "K13a",
+      "metric": "ARI parent->child, rewrite - no-record",
+      "direction": ">",
+      "evaluator": "confirm3.py"
+    },
+    {
+      "id": "K13b",
+      "metric": "ARI rewrite - accumulate (random/success)",
+      "direction": ">",
+      "evaluator": "confirm3.py"
+    },
+    {
+      "id": "K14",
+      "metric": "content rule - random19: |d topsim_distinct| < 0.03 AND |d CBM| < 0.02, >=3 of 4 rules; all |d topsim| < 0.05",
+      "direction": "equivalence",
+      "evaluator": "probe40.py / probe46.py"
+    },
+    {
+      "id": "K15",
+      "metric": "retention: same-form anchor - other-form anchors",
+      "direction": ">",
+      "min_effect": 0.15,
+      "evaluator": "confirm3.py"
+    },
+    {
+      "id": "K16",
+      "metric": "sibling ARI: same record - different records (primary); different - none (secondary)",
+      "direction": ">",
+      "evaluator": "probe42.py"
+    },
+    {
+      "id": "K17a",
+      "metric": "sibling ARI: stale - fresh",
+      "direction": "equivalence mean >= -0.05, CI lower >= -0.10",
+      "evaluator": "probe45.py / probe46.py"
+    },
+    {
+      "id": "K17b",
+      "metric": "child-parent ARI: fresh - stale",
+      "direction": ">",
+      "evaluator": "probe45.py / probe46.py"
+    },
+    {
+      "id": "K17c",
+      "metric": "child-step500 ARI: stale - fresh",
+      "direction": ">",
+      "evaluator": "probe45.py"
+    },
+    {
+      "id": "K18",
+      "metric": "ARI(gen0, gen5) over train objects, cap 19",
+      "contrast": "rewrite - accumulate (a); rewrite > 0.10 and accumulate < 0.10 (b)",
+      "direction": ">",
+      "evaluator": "confirm4.py",
+      "provenance": "registered in results_v3_confirm2/PREREG.md, addendum of 2026-09-04 written while results_replicate (seeds 100-119) was running and before it was inspected; added to this manifest on 2026-09-05 as missing metadata, not as a new registration"
+    }
+  ],
+  "note_2026_09_05": "K18 entry added (metadata only). K17a rule is a one-sided noninferiority-like criterion (mean >= -0.05 and CI lower >= -0.10, no seed-share rule), not a symmetric equivalence test. K12's registered subgroup is 0 vs >=2 taught neighbours; the 3+ subgroup reported earlier is additional. Thresholds themselves unchanged."
+}
